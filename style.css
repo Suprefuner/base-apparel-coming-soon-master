@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  /* COLOR */
+  --color-red-1: hsl(0, 36%, 70%);
+  --color-red-2: hsl(0, 93%, 68%);
+  --color-red-3: hsl(0, 6%, 24%);
+
+  /* FONT */
+  --font-display: "Josefin Sans", sans-serif;
+  --fw-1: 300;
+  --fw-2: 400;
+  --fw-3: 600;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  vertical-align: middle;
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: var(--font-display);
+
+  background-image: url(./images/bg-pattern-desktop.svg);
+}
+
+.container {
+  padding-block: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.logo {
+  align-self: start;
+}
+
+.hero {
+  width: 100%;
+  height: 300px;
+  background-image: url(./images/hero-mobile.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo,
+.text {
+  padding-inline: 3rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.heading-1 {
+  margin: auto;
+
+  color: var(--color-red-1);
+  font-size: 4rem;
+  font-weight: var(--fw-1);
+  letter-spacing: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.heading-1 span {
+  color: black;
+  font-weight: var(--fw-3);
+}
+
+.content {
+  margin: auto;
+
+  color: var(--color-red-1);
+  font-size: 1.8rem;
+  font-weight: var(--fw-2);
+  text-align: center;
+  line-height: 1.8;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.input-email {
+  padding: 1.5rem 2.2rem;
+
+  color: var(--color-red-3);
+  font-weight: var(--fw-3);
+
+  border: 1px solid #ccc;
+  border-radius: 5rem;
+
+  transition: 0.2s;
+}
+
+.input-email:focus {
+  outline: none;
+  border: 1px solid var(--color-red-1);
+}
+
+.input-email::placeholder {
+  color: var(--color-red-1);
+}
+
+.btn-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  width: 7rem;
+
+  padding-block: 1.5rem;
+  transform: translate(0, -50%);
+
+  background-image: linear-gradient(
+    to right,
+    var(--color-red-1),
+    var(--color-red-2)
+  );
+
+  border: none;
+  border-radius: 5rem;
+
+  box-shadow: 0 1rem 2rem var(--color-red-1);
+  transition: 0.2s;
+}
+
+label {
+  position: absolute;
+  left: 2.5rem;
+  bottom: -2rem;
+
+  color: var(--color-red-2);
+}
+
+.icon-error {
+  position: absolute;
+  top: 50%;
+  right: 8.5rem;
+
+  transform: translateY(-50%);
+}
+
+.hidden {
+  display: none;
+}
+
+.class::-webkit-input-placeholder {
+  color: green;
+}
+
+/* RWD--------------------------------------------------------- */
+
+@media only screen and (min-width: 1170px) {
+  body {
+    display: grid;
+    grid-template-columns: auto 50%;
+    gap: 20rem;
+  }
+
+  .container {
+    max-width: 100em;
+    height: 100vh;
+
+    margin-left: 15vw;
+
+    align-items: start;
+  }
+
+  .hero {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    width: 50%;
+    height: 100vh;
+
+    background-image: url(./images/hero-desktop.jpg);
+    background-position: left top;
+    background-size: cover;
+  }
+
+  .text {
+    margin-top: 35vh;
+    transform: translateY(-50%);
+  }
+
+  .heading-1 {
+    padding-right: 10rem;
+  }
+
+  .heading-1,
+  .content {
+    text-align: left;
+  }
+
+  .btn-arrow {
+    cursor: pointer;
+  }
+
+  .btn-arrow:hover {
+    filter: brightness(1.5);
+  }
+}

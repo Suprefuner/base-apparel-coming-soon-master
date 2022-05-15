@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main class="container">
+      <img src="./images/logo.svg" alt="company logo" class="logo" />
+      <div class="hero"></div>
+      <!-- <picture class="hero__img">
+        <source srcset="./images/hero-mobile.jpg" media="(max-width: 65em)" />
+        <source srcset="./images/hero-desktop.jpg" media="(min-width: 65em)" />
+        <img src="./images/hero-mobile.jpg" />
+      </picture> -->
+      <div class="text">
+        <h1 class="heading-1">We're <span>coming soon</span></h1>
+        <p class="content">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <div class="input">
+          <input
+            type="email"
+            class="input-email"
+            id="email"
+            placeholder="Email Address"
+          />
+          <label for="email" class="hidden">Please provide a valid email</label>
+          <button class="btn-arrow">
+            <img src="./images/icon-arrow.svg" alt="arrow icon" />
+          </button>
+          <img
+            src="./images/icon-error.svg"
+            alt="error icon"
+            class="icon-error hidden"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
